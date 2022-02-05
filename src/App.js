@@ -7,6 +7,7 @@ import PostList from "./component/PostList";
 import TodoForm from "./component/TodoForm";
 import TodoList from "./component/TodoList";
 import PostFiltersForm from "./component/PostFiltersForm";
+import Clock from "./component/Clock";
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -86,20 +87,24 @@ function App() {
       title_like: newFilters.searchTerm,
     });
   }
+
+  const [showClock, setShowClock] = useState(true);
   return (
     <div className="app">
       <h1>React hooks - Todolist</h1>
 
       {/* <TodoForm onSubmit={handleTodoFormSubmit} /> */}
       {/* <TodoList todos={todoList} onTodoClick={handleTodoClick}/> */}
-      <PostFiltersForm onsubmit={handleFiltersChange}/>
       
+      {/* <PostFiltersForm onsubmit={handleFiltersChange}/>      
       <PostList posts={postList}/>
-
       <Pagination
         pagination={pagination}
         onPageChange={handlePageChange}
-      />
+      /> */}
+
+      {showClock && <Clock/>}
+      <button onClick={() => setShowClock(false)}>Hide Clock</button>
 
     </div>
   );
