@@ -8,6 +8,7 @@ import TodoForm from "./component/TodoForm";
 import TodoList from "./component/TodoList";
 import PostFiltersForm from "./component/PostFiltersForm";
 import Clock from "./component/Clock";
+import MagicBox from "./component/MagicBox";
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -96,15 +97,17 @@ function App() {
       {/* <TodoForm onSubmit={handleTodoFormSubmit} /> */}
       {/* <TodoList todos={todoList} onTodoClick={handleTodoClick}/> */}
       
-      {/* <PostFiltersForm onsubmit={handleFiltersChange}/>      
+       <PostFiltersForm onsubmit={handleFiltersChange}/>     
       <PostList posts={postList}/>
       <Pagination
         pagination={pagination}
         onPageChange={handlePageChange}
-      /> */}
+      /> 
 
-      {showClock && <Clock/>}
-      <button onClick={() => setShowClock(false)}>Hide Clock</button>
+      {/* {showClock && <Clock/>}
+      <button onClick={() => setShowClock(false)}>Hide Clock</button> */}
+
+      {/* <MagicBox/> */}
 
     </div>
   );
